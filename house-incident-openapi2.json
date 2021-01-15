@@ -80,6 +80,10 @@
                 },
                 "description": {
                     "type": "string"
+                },
+                "status": {
+                    "description": "",
+                    "type": "string"
                 }
             },
             "example": {
@@ -87,7 +91,8 @@
                 "date": "11/25/2020",
                 "phone": "2028909000",
                 "email": "mcgiver@statepolice.com",
-                "description": "flooding"
+                "description": "flooding",
+                "status" : "pending review"
             }
         }
     }
