@@ -1,0 +1,94 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "House Incident API",
+        "version": "0.0.0",
+        "description": ""
+    },
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/incidents": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "House Incidents",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/house-incidents"
+                            }
+                        }
+                    }
+                },
+                "operationId": "incidents",
+                "summary": "All House incidents",
+                "description": "Returns all house incidents"
+            }
+        },
+        "/count": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Number of incidents",
+                        "schema": {
+                            "$ref": "#/definitions/count"
+                        }
+                    }
+                },
+                "operationId": "count",
+                "summary": "count",
+                "description": "Returns total number of incidents"
+            }
+        }
+    },
+    "definitions": {
+        "count": {
+            "title": "Root Type for count",
+            "description": "Number of incidents         ",
+            "type": "object",
+            "properties": {
+                "count": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "example": {
+                "count": 0
+            }
+        },
+        "house-incidents": {
+            "title": "Root Type for house-incidents",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "contactName": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "contactName": "Fake Office McGive",
+                "date": "11/25/2020",
+                "phone": "2028909000",
+                "email": "mcgiver@statepolice.com",
+                "description": "flooding"
+            }
+        }
+    }
+}
