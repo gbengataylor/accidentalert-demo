@@ -12,29 +12,11 @@
         "application/json"
     ],
     "paths": {
-        "/incidents": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "Life Insurance Incidents",
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/life-incidents"
-                            }
-                        }
-                    }
-                },
-                "operationId": "incidents",
-                "summary": "All Life Insurance incidents",
-                "description": "Returns all life insurance incidents"
-            }
-        },
         "/count": {
             "get": {
                 "responses": {
                     "200": {
-                        "description": "Number of incidents",
+                        "description": "Total number of claims",
                         "schema": {
                             "$ref": "#/definitions/count"
                         }
@@ -42,7 +24,25 @@
                 },
                 "operationId": "count",
                 "summary": "count",
-                "description": "REturns total number of incidents"
+                "description": "REturns total number of claims"
+            }
+        },
+        "/claims": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Life Insurance Claims",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/life-claims"
+                            }
+                        }
+                    }
+                },
+                "operationId": "claims",
+                "summary": "All Life Insurance claims",
+                "description": "Returns all life insurance claims"
             }
         }
     },
@@ -61,7 +61,7 @@
                 "count": 0
             }
         },
-        "life-incidents": {
+        "life-claims": {
             "title": "Root Type for life-incidents",
             "description": "",
             "type": "object",
