@@ -1,0 +1,94 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Car Incident API",
+        "version": "0.0.0",
+        "description": ""
+    },
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/incidents": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Car Incidents",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/car-incidents"
+                            }
+                        }
+                    }
+                },
+                "operationId": "incidents",
+                "summary": "All Car incidents",
+                "description": "Returns all car incidents"
+            }
+        },
+        "/count": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Number of incidents",
+                        "schema": {
+                            "$ref": "#/definitions/count"
+                        }
+                    }
+                },
+                "operationId": "count",
+                "summary": "count",
+                "description": "REturns total number of incidents"
+            }
+        }
+    },
+    "definitions": {
+        "count": {
+            "title": "Root Type for count",
+            "description": "Number of incidents         ",
+            "type": "object",
+            "properties": {
+                "count": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            },
+            "example": {
+                "count": 0
+            }
+        },
+        "car-incidents": {
+            "title": "Root Type for car-incidents",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "contactName": {
+                    "type": "string"
+                },
+                "date": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "contactName": "Fake Office McGive",
+                "date": "11/25/2020",
+                "phone": "2028909000",
+                "email": "mcgiver@statepolice.com",
+                "description": "accident in highway"
+            }
+        }
+    }
+}
