@@ -80,6 +80,9 @@
                 },
                 "description": {
                     "type": "string"
+                },
+                "status": {
+                    "description": ""
                 }
             },
             "example": {
@@ -87,7 +90,8 @@
                 "date": "11/25/2020",
                 "phone": "2028909000",
                 "email": "mcgiver@statepolice.com",
-                "description": "accident in highway"
+                "description": "accident in highway",
+                "status": "pending"
             }
         }
     }
