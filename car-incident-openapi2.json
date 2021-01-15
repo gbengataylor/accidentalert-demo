@@ -82,7 +82,8 @@
                     "type": "string"
                 },
                 "status": {
-                    "description": ""
+                    "description": "",
+                    "type": "string"
                 }
             },
             "example": {
