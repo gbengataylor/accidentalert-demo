@@ -80,6 +80,10 @@
                 },
                 "description": {
                     "type": "string"
+                },
+                "claim-status": {
+                    "description": "",
+                    "type": "string"
                 }
             },
             "example": {
